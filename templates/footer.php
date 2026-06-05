@@ -1,5 +1,5 @@
 <footer>
-    <p>mon beau footer</p>
+    <p>@mathias mon footer</p>
 </footer>
 </main>
 </body>

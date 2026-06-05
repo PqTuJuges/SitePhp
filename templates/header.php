@@ -6,8 +6,8 @@ require_once __DIR__ . "/../config/config.php"
 
 <head>
     <meta charset="UTF-8">
-    <meta><?= $metaDescription ?? "valeur par défaut" ?>
-    <title><?= $titre ?? "valeur par défaut" ?></title>
+    <meta name="description" content="<?php echo $metaDescription ?? 'Bienvenue sur notre site web par défaut.'; ?>">
+    <title><?php echo $pageTitre ?? 'Mon Site Web - Accueil'; ?></title>
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
 </head>
 
@@ -15,8 +15,9 @@ require_once __DIR__ . "/../config/config.php"
     <header>
         <nav>
             <ul>
-                <li><a href="<?= BASE_URL ?>/index.php">accueil</li>
-                <li><a href="<?= BASE_URL ?>/contact.php">contact</li>
+                <li><a href="<?= BASE_URL ?>/index.php">Accueil</a></li>
+                <li><a href="<?= BASE_URL ?>/contact.php">Contact </a></li>
+                <li><a href="<?= BASE_URL ?>/connexion.php">Connexion</a></li>
             </ul>
         </nav>
     </header>

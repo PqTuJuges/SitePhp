@@ -42,10 +42,10 @@ function validerChamps($entreesUtilisateur, $reglesDesChamps)
         }
     }
     if (empty($erreurs)) {
-        $messageGlobal = "Le formulaire a bien été envoyé ✅";
+        $messageGlobal = "Le formulaire a bien été envoyé";
         $anciennesValeurs = [];
     } else {
-        $messageGlobal = "Le formulaire contient des erreurs ❌";
+        $messageGlobal = "Le formulaire contient des erreurs";
     }
     return [$erreurs, $messageGlobal, $anciennesValeurs];
 }
