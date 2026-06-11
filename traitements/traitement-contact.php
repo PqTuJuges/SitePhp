@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../core/gestion-formulaire.php';
 
+
 $erreurs = [];
 $messageGlobal = "";
 $anciennesValeurs = [];

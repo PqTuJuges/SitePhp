@@ -1,3 +1,2 @@
-<?php 
-    define('BASE_URL', '/Site');
-?>
+<?php
+define('BASE_URL', '/SITEPHP');

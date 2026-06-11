@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . "/../config/config.php"
+require_once __DIR__ . "/../config/config.php";
+require_once __DIR__ . '/../core/gestionAuthentification.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +18,11 @@ require_once __DIR__ . "/../config/config.php"
             <ul>
                 <li><a href="<?= BASE_URL ?>/index.php">Accueil</a></li>
                 <li><a href="<?= BASE_URL ?>/contact.php">Contact </a></li>
-                <li><a href="<?= BASE_URL ?>/connexion.php">Connexion</a></li>
+                <?php if (est_connecte()) : ?>
+                    <li><a href="<?= BASE_URL ?>/profil.php">Profil</a></li>
+                <?php else : ?>
+                    <li><a href="<?= BASE_URL ?>/connexion.php">Connexion</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
