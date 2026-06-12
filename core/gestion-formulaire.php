@@ -39,6 +39,14 @@ function validerChamps(array $entreesUtilisateur, array $reglesDesChamps): array
             $erreurs[$cle] = "Ce champ doit faire entre {$regle["minMax"][0]} et {$regle["minMax"][1]} caractères";
         } elseif (isset($regle["type"]) && $regle["type"] === "email" && !emailEstValide($valeur)) {
             $erreurs[$cle] = "Email invalide";
+        } elseif (isset($regle["confirm"])) {
+            $champReference = lireChampTexte($entreesUtilisateur, $regle["confirm"]);
+            if ($valeur !== $champReference) {
+                $erreurs[$cle] = "Les mots de passe ne correspondent pas";
+            }
+        }
+        if (!isset($erreurs[$cle]) && isset($regle["unique"]) && !$regle["unique"]($valeur)) {
+            $erreurs[$cle] = "Cette valeur est déjà utilisée";
         }
     }
     if (empty($erreurs)) {
