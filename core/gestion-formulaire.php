@@ -46,7 +46,7 @@ function validerChamps(array $entreesUtilisateur, array $reglesDesChamps): array
             }
         }
         if (!isset($erreurs[$cle]) && isset($regle["unique"]) && !$regle["unique"]($valeur)) {
-            $erreurs[$cle] = "Cette valeur est déjà utilisée";
+            $erreurs[$cle] = "Deja utilisee";
         }
     }
     if (empty($erreurs)) {
