@@ -4,7 +4,6 @@ $metaDescription = "La métadescription du site";
 
 require __DIR__ . '/traitements/traitement-contact.php';
 
-// Étape 1 — Versions échappées des anciennes valeurs
 $vieuxNom     = htmlspecialchars($anciennesValeurs['nom']     ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 $vieuxPrenom  = htmlspecialchars($anciennesValeurs['prenom']  ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 $vieuxEmail   = htmlspecialchars($anciennesValeurs['email']   ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');

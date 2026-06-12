@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $messageGlobal = 'Pseudo ou mot de passe incorrect.';
                 $erreurs['connexion_global'] = true;
             } elseif (!$utilisateur['uti_compte_active']) {
-                $messageGlobal = 'Votre compte n\'est pas actif.';
+                $messageGlobal = 'Votre compte n est pas actif.';
                 $erreurs['connexion_global'] = true;
             } else {
                 connecter_utilisateur($utilisateur['uti_id']);

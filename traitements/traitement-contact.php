@@ -35,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $sujet = "Projet Framework - Formulaire de contact";
 
-        // Corps du mail en HTML
         $corps = '
         <html>
         <body>
@@ -61,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </body>
         </html>';
 
-        // En-têtes du mail
         $entetes  = "From: Site Web <no-reply@monsite.com>\r\n";
         $entetes .= "To: " . $destinataire . "\r\n";
         $entetes .= "Reply-To: " . $email . "\r\n";

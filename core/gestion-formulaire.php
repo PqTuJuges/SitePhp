@@ -5,19 +5,19 @@ function e(string $texte): string
 {
     return htmlspecialchars($texte, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
-function lireChampTexte($tableauDonnees, $nomChamp)
+function lireChampTexte(array $tableauDonnees, string $nomChamp): string
 {
     return trim($tableauDonnees[$nomChamp] ?? "");
 }
-function longueurString($valeurChamp, $longueurMin, $longueurMax)
+function longueurString(string $valeurChamp, int $longueurMin, int $longueurMax): bool
 {
     return mb_strlen($valeurChamp) < $longueurMin || mb_strlen($valeurChamp) > $longueurMax;
 }
-function emailEstValide($valeurChamp)
+function emailEstValide(string $valeurChamp): bool
 {
-    return filter_var($valeurChamp, FILTER_VALIDATE_EMAIL);
+    return filter_var($valeurChamp, FILTER_VALIDATE_EMAIL) !== false;
 }
-function validerChamps($entreesUtilisateur, $reglesDesChamps)
+function validerChamps(array $entreesUtilisateur, array $reglesDesChamps): array
 {
     $erreurs = [];
     $anciennesValeurs = [];
